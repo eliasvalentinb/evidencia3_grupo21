@@ -2,7 +2,8 @@
 En este archivo definiremos el menú de opciones.
 """
 
-from modulo_opciones import organizar_partido, buscar_partido
+from modulo_opcion1 import organizar_partido
+from modulo_opcion2 import buscar_partido
 import time
 
 # Definimos una función con el menú de opciones
