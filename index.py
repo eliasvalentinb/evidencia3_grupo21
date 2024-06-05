@@ -8,7 +8,7 @@ import time
 
 # Definimos una función con el menú de opciones
 def menu_principal():
-    print("¡Bienvenido a la aplicación!")
+    print("¡Bienvenido a SEJUEGA!")
     print("----------------------------")
     print("1. Organizar un partido")
     print("2. Unirse a un partido.")
