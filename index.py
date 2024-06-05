@@ -5,6 +5,7 @@ En este archivo definiremos el menú de opciones.
 from modulo_opciones import organizar_partido, buscar_partido
 import time
 
+# Definimos una función con el menú de opciones
 def menu_principal():
     print("¡Bienvenido a la aplicación!")
     print("----------------------------")
@@ -13,6 +14,8 @@ def menu_principal():
     print("3. Salir")
     time.sleep(0.5)
 
+# Definimos una función 'main' para controlar el flujo del programa, muestra el menú, recibe la entrada del usuario
+# y llama a la función según corresponda
 def main():
     while True:
         menu_principal()
@@ -31,5 +34,7 @@ def main():
             print("Opción no válida. Intenta nuevamente.")
             time.sleep(0.5)
 
+# Esto asegura que 'main()' se ejecute solo cuando el archivo se ejecute directamente
+# no se importa como un módulo
 if __name__ == "__main__":
     main()
