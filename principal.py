@@ -14,7 +14,7 @@ def menu_principal():
     print("¡Bienvenido a SEJUEGA!")
     print("----------------------------")
     print("1. Si sos JUGADOR")
-    print("2. Si sos USUARIO PREDIO")
+    print("2. Si sos ADMINISTRADOR")
     print("3. Ingresar como invitado")
     print("4. Si aún no estás registrado")
     print("5. Salir")
