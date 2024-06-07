@@ -1,11 +1,12 @@
 """ 
 En este archivo definiremos el menú de opciones.
 """
-from usuario_predio import menu_predio
+from usuario_predio import menu_admin
 from opciones_predio import actualizar_horarios, actualizar_precios
 from usuario_jugador import menu_jugador
-from opciones_jugador import organizar_partido, buscar_partido
-
+from opciones_jugador import organizar_partido, buscar_partido, modificar_datos, eliminar_cuenta
+from mody_register import menu_registro
+from usuario_invitado import invitado
 import time
 
 # Definimos una función con el menú de opciones
@@ -14,7 +15,9 @@ def menu_principal():
     print("----------------------------")
     print("1. Si sos JUGADOR")
     print("2. Si sos USUARIO PREDIO.")
-    print("3. Salir")
+    print("3. Ingresar como invitado")
+    print("4. Si no estás registrado")
+    print("5. Salir")
     time.sleep(0.5)
 
 # Definimos una función 'main' para controlar el flujo del programa, muestra el menú, recibe la entrada del usuario
@@ -35,11 +38,17 @@ def main():
                 elif opcion == "2":
                     buscar_partido()
                     break
+                elif opcion == "3":
+                    modificar_datos()
+                    break
+                elif opcion == "4":
+                    eliminar_cuenta()
+                    break
                 else:
                     print("Opción no válida. Intentá nuevamente.")
         elif opcion == "2":
             while True:
-                menu_predio()
+                menu_admin()
                 opcion = input("Seleccioná una opción: ")
                 time.sleep(0.5)
                 if opcion == "1":
@@ -51,6 +60,13 @@ def main():
                 else:
                     print("Opción no válida. Intentá nuevamente.")
         elif opcion == "3":
+            invitado()
+            buscar_partido()
+            
+        elif opcion == "4":
+            menu_registro()
+
+        elif opcion == "5":
             print("Saliendo...")
             break
         else:

@@ -5,3 +5,9 @@ def organizar_partido():
 
 def buscar_partido():
     print("Has seleccionado la opción de buscar partidos en tu zona.")
+
+def modificar_datos():
+    print ("Has seleccionado la opcion de MODIFICAR DATOS")
+
+def eliminar_cuenta():
+    print ("Has seleccionado la opcion de ELIMINAR CUENTA")
