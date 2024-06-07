@@ -2,4 +2,4 @@
 
 def menu_admin():
     print("1. Para actualizar horarios.")
-    print("2 Para actualizar precios.")
+    print("2. Para actualizar precios.")

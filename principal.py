@@ -16,7 +16,7 @@ def menu_principal():
     print("1. Si sos JUGADOR")
     print("2. Si sos USUARIO PREDIO.")
     print("3. Ingresar como invitado")
-    print("4. Si no estás registrado")
+    print("4. Si aún no estás registrado")
     print("5. Salir")
     time.sleep(0.5)
 
@@ -25,7 +25,7 @@ def menu_principal():
 def main():
     while True:
         menu_principal()
-        opcion = input("Seleccione una opción: ")
+        opcion = input("Seleccioná una opción: ")
         time.sleep(0.5)
         if opcion == "1":
             while True:
