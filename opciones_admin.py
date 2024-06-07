@@ -1,4 +1,4 @@
-# Funciones para opciones de USUARIO PREDIO
+# Funciones para opciones de usuario ADMINISTRADOR
 
 def actualizar_horarios():
     print("Has seleccionado la opción de actualizar los horarios.")

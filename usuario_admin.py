@@ -1,4 +1,4 @@
-# Función para menú de usuario PREDIO
+# Función para menú de usuario ADMINISTRADOR
 
 def menu_admin():
     print("1. Para actualizar horarios.")

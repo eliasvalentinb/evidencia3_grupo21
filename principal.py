@@ -16,9 +16,8 @@ def menu_principal():
     print("----------------------------")
     print("1. Si sos JUGADOR")
     print("2. Si sos ADMINISTRADOR")
-    print("3. Ingresar como invitado")
-    print("4. Si aún no estás registrado")
-    print("5. Salir")
+    print("3. Si aún no estás registrado")
+    print("4. Salir")
     time.sleep(0.5)
 
 # Definimos una función 'main' para controlar el flujo del programa, muestra el menú, recibe la entrada del usuario
@@ -69,12 +68,9 @@ def main():
                 else:
                     print("Opción no válida. Intentá nuevamente.")
         elif opcion == "3":
-            invitado()
-            break
-        elif opcion == "4":
             menu_registro()
             break
-        elif opcion == "5":
+        elif opcion == "4":
             print("Saliendo...")
             break
         else:
