@@ -1,8 +1,8 @@
 """ 
 En este archivo definiremos el menú de opciones.
 """
-from usuario_predio import menu_admin
-from opciones_predio import actualizar_horarios, actualizar_precios
+from usuario_admin import menu_admin
+from opciones_admin import actualizar_horarios, actualizar_precios
 from usuario_jugador import menu_jugador
 from opciones_jugador import organizar_partido, buscar_partido, modificar_datos, eliminar_cuenta
 from mody_register import menu_registro
