@@ -6,9 +6,10 @@ El objetivo principal de la aplicación es satisfacer a un usuario la necesidad 
 
 Por otro lado, existirá también una opción de ingreso para el usuario administrador del predio, que tenga control sobre distintos datos relevantes del momento. 
 
-El proyecto está organizado en siete archivos Python (`.py`), cada uno de los cuales contiene diferentes partes de la funcionalidad de la aplicación.
 
 ### ARCHIVOS FUENTE 
+
+El proyecto está organizado en siete archivos Python (`.py`), cada uno de los cuales contiene diferentes partes de la funcionalidad de la aplicación.
 
 1. **principal.py**
    - Este es el archivo principal que ejecuta la aplicación. Contiene el menú principal y la lógica para navegar entre las distintas opciones de la aplicación. Utiliza funciones definidas en otros módulos.
