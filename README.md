@@ -9,41 +9,46 @@ Por otro lado, existirá también una opción de ingreso para el usuario adminis
 
 ### ARCHIVOS FUENTE 
 
-El proyecto está organizado en siete archivos Python (`.py`), cada uno de los cuales contiene diferentes partes de la funcionalidad de la aplicación.
+El proyecto está organizado en ocho archivos Python (`.py`), cada uno de los cuales contiene diferentes partes de la funcionalidad de la aplicación.
 
 1. **principal.py**
    - Este es el archivo principal que ejecuta la aplicación. Contiene el menú principal y la lógica para navegar entre las distintas opciones de la aplicación. Utiliza funciones definidas en otros módulos.
    - Las funciones en este módulo son:
       * *'menu_principal()'*: Función que contiene las opciones principales con las que el usuario tendrá la primera interacción la ingresar a la app.
       * *'main()'*: Función que controla el flujo del programa.
-2. **usuario_jugador.py**
+
+2. **tipo_usuario.py**
+   - Contiene la definición de la función que servirá para elegir el tipo de usuario.
+   - *'tipo_usuario()'*: Función que será llamada cuando el usuario elija la opción de ingresar como "Jugador" y que le preguntará si quiere ingresar como usuario JUGADOR o usuario INVITADO
+
+3. **usuario_jugador.py**
    - Contiene la definición de una de las funciones que son llamadas desde el 'principal.py'. 
    - *'menu_jugador()'*: Función que será llamada cuando el usuario elija ingresar con el perfil de jugador. La misma mostrará las opciones que tiene el usuario en la primera interacción con el programa.
 
-3. **opciones_jugador.py**
-      - Contiene la definición algunas de las funciones que son llamadas desde el 'principal.py'.
-      - Este módulo contiene las cuatro funciones que refieren a las princpiales opciones que tendrá el usuario jugador después de haber iniciado sesión. Son las siguientes:
+4. **usuario_invitado.py**
+      - Contiene la definición de una de las funciones que son llamadas desde el 'principal.py'.
+      - *'invitado()'*: La única opción que tendrá este tipo de usuario será la de buscar un partido al que sumarse sin necesidad de registrar sus datos en la app, no tendrá la opción dem organizar partidos. Actualmente, solo imprime un mensaje indicando la selección.
+
+5. **opciones_jugador.py**
+      - Contiene la definición de algunas de las funciones que son llamadas desde el 'principal.py'.
+      - Este módulo contiene las cuatro funciones que refieren a las princpiales opciones que tendrá el usuario JUGADOR después de haber iniciado sesión. Son las siguientes:
          * *'organizar_partido()'*: Función que será llamada cuando el usuario elija la opción de organizar un partido como anfitrión. Actualmente, solo imprime un mensaje indicando la selección.
          * *'buscar_partido()'*: Función que será llamada cuando el usuario elija la opción de buscar y sumarse a un partido disponible. Actualmente, solo imprime un mensaje indicando la selección.
          * *'modificar_datos()'*: Función que será llamada cuando el usuario elija la opción de modificar los datos de su cuenta. Actualmente, solo imprime un mensaje indicando la selección.
          * *'eliminar_cuenta()'*: Función que será llamada cuando el usuario elija la opción de eliminar la cuenta. Actualmente,solo imprime un mensaje indicando la selección.
 
-4. **usuario_admin.py**
+6. **usuario_admin.py**
      - Contiene la definición de una de las funciones que son llamadas desde el 'principal.py'. 
       - *'menu_admin()'*: Función que será llamada cuando el usuario elija ingresar con el perfil de administrador. Este usuario tendrá el permiso de modificar precios y horarios del predio.
 
-5. **opciones_admin.py**
+7. **opciones_admin.py**
       - Contiene la definición algunas de las funciones que son llamadas desde el 'principal.py'.
       - Este módulo contiene las dos funciones que refieren a las princpiales opciones que tendrá el usuario administrador después de haber iniciado sesión. Son las siguientes:
          * *'actualizar_horarios()'*: Función que será llamada cuando el usuario administrador elija la opción de actualizar los horarios del predio.
          * *'actualizar_precios()'*: Función que será llamada cuando el usuario administrador elija la opción de actualizar los precios del predio. Actualmente, solo imprime un mensaje indicando la selección. 
-
-6. **usuario_invitado.py**
-      - Contiene la definición de una de las funciones que son llamadas desde el 'principal.py'.
-      - *'usuario()'*: La única opción que tendrá este tipo de usuario será la de buscar un partido al que sumarse sin necesidad de registrar sus datos en la app, no tendrá la opción dem organizar partidos. Actualmente, solo imprime un mensaje indicando la selección.
       
    
-7. **mody_register.py**
+8. **mody_register.py**
       - Contiene la definición de una de las funciones que son llamadas desde el 'principal.py'.
          * *'menu_registro()'*: Función que será llamada cuando el usuario elija la opción de registrarse sin aún no lo ha hecho. Actualmente, solo imprime un mensaje indicando la selección.
 
@@ -56,7 +61,7 @@ Detalle del funcionamiento de la aplicación:
 
 **Ingresando como JUGADOR** 
 
-Al ingresar en rol de "Jugador" el usuario tendrá cuatro opciones a elegir: 
+Al ingresar en rol de "Jugador" el usuario tendrá dos opciones a elegir, ingresar como JUGADOR ya registrado o ingresar como INVITADO, en el caso de ingresar como el primero, este tendrá cuatro opciones a elegir: 
 
 La primera, *Organizar un partido*, esta opción será para que el usuario pueda crear un partido como anfitrión, haciendo de este como "Privado" o "Público" si desea que se le muestre a otros jugadores que busquen sumarse a un partido". 
 
@@ -65,6 +70,12 @@ La segunda, *Buscar un partido*, esta opción será para que el usuario pueda bu
 La tercera, *Modifcar datos*, esta opción será para que el usuario pueda actualizar los datos de su cuenta.
 
 La cuarta, *Eliminar cuenta*, esta opción será si el usuario desea eliminar su cuenta y sus datos de la aplicación.
+
+**Ingresando como INVITADO**
+
+Al ingresar como "Invitado", el usuario podrá interactuar con la aplicación sin necesidad de registrar sus datos, tendrá una sola opción a elegir y será la de 'Buscar un partido'. 
+
+**Para poder organizar un partido debe registrarse.* 
 
 **Ingresando como ADMINISTRADOR**
 
@@ -76,15 +87,15 @@ La segunda, *Actualizar precios*, será para que pueda actualizar los precios de
 
 **Se asume que el administrador es el dueño/encargado del predio.*
 
-**Ingresando como INVITADO**
-
-Al ingresar como "Invitado", el usuario podrá interactuar cojn la aplicación sin necesidad de registrar sus datos, tendrá una sola opción a elegir, será la de 'Buscar un partido'. Para poder organizar uno debe registrarse. 
-
 **REGISTRARSE**
 
 Una opción para el usuario que ingresa por primera vez a la aplicación y quiere disfrutar de todos los beneficios y opciones que tenga esta es la de "Registrarse". En esta opción se podrán registrar diversos datos que se consideren relevantes para la interacción con la aplicación.
 
 **Las opciones dentro de este menú las expandiremos en el proyecto final.*
+
+### COMENTARIOS
+
+Cabe aclarar que este código es solo la base del programa, el cual pretendemos expandir mucho más de lo que se pidió para esta consigna. Se agradece cualquier sugerencia que pueda servir para mejorar en el proyecto final y que el programa sea más óptimo.
 
 ### COLABORADORES
 
