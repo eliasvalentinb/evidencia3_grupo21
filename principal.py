@@ -61,11 +61,10 @@ def main():
                     print("Opción no válida. Intentá nuevamente.")
         elif opcion == "3":
             invitado()
-            buscar_partido()
-            
+            break
         elif opcion == "4":
             menu_registro()
-
+            break
         elif opcion == "5":
             print("Saliendo...")
             break
