@@ -7,6 +7,7 @@ from usuario_jugador import menu_jugador
 from opciones_jugador import organizar_partido, buscar_partido, modificar_datos, eliminar_cuenta
 from mody_register import menu_registro
 from usuario_invitado import invitado
+from tipo_jugador import tipo_usuario
 import time
 
 # Definimos una función con el menú de opciones
@@ -29,23 +30,31 @@ def main():
         time.sleep(0.5)
         if opcion == "1":
             while True:
-                menu_jugador()
+                tipo_usuario()
                 opcion = input("Seleccioná una opción: ")
-                time.sleep(0.5)
-                if opcion == "1":
-                    organizar_partido()
-                    break
+                if opcion == "1":    
+                    menu_jugador()
+                    opcion = input("Seleccioná una opción: ")
+                    time.sleep(0.5)
+                    if opcion == "1":
+                        organizar_partido()
+                        break
+                    elif opcion == "2":
+                        buscar_partido()
+                        break
+                    elif opcion == "3":
+                        modificar_datos()
+                        break
+                    elif opcion == "4":
+                        eliminar_cuenta()
+                        break
+                    else:
+                        print("Opción no válida. Intentá nuevamente.")
                 elif opcion == "2":
-                    buscar_partido()
+                    invitado()
                     break
-                elif opcion == "3":
-                    modificar_datos()
-                    break
-                elif opcion == "4":
-                    eliminar_cuenta()
-                    break
-                else:
-                    print("Opción no válida. Intentá nuevamente.")
+                else: 
+                    print ("Opción no válida. Intentá nuevamente.")
         elif opcion == "2":
             while True:
                 menu_admin()
