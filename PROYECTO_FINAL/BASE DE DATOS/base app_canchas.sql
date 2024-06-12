@@ -80,7 +80,7 @@ CREATE TABLE `jugadores` (
   `id_partido` int DEFAULT NULL,
   `id_Usuario` int DEFAULT NULL,
   PRIMARY KEY (`Id_registro`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,7 +89,7 @@ CREATE TABLE `jugadores` (
 
 LOCK TABLES `jugadores` WRITE;
 /*!40000 ALTER TABLE `jugadores` DISABLE KEYS */;
-INSERT INTO `jugadores` VALUES (1,2,1),(2,3,1),(4,2,1),(5,1,1),(6,2,1),(7,2,1),(8,2,1),(9,2,9),(10,2,4);
+INSERT INTO `jugadores` VALUES (1,2,1),(2,3,1),(4,2,1),(5,1,1),(6,2,1),(7,2,1),(8,2,1),(9,2,9),(10,2,4),(11,2,11);
 /*!40000 ALTER TABLE `jugadores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -197,7 +197,7 @@ CREATE TABLE `turnos` (
 
 LOCK TABLES `turnos` WRITE;
 /*!40000 ALTER TABLE `turnos` DISABLE KEYS */;
-INSERT INTO `turnos` VALUES (1,'00:00 - 01:00','00:00','01:00','NO'),(2,'01:00 - 02:00','01:00','02:00','NO'),(3,'02:00 - 03:00','02:00','03:00','NO'),(4,'03:00 - 04:00','03:00','04:00','NO'),(5,'04:00 - 05:00','04:00','05:00','NO'),(6,'05:00 - 06:00','05:00','06:00','NO'),(7,'06:00 - 07:00','06:00','07:00','NO'),(8,'07:00 - 08:00','07:00','08:00','NO'),(9,'08:00 - 09:00','08:00','09:00','NO'),(10,'09:00 - 10:00','09:00','10:00','NO'),(11,'10:00 - 11:00','10:00','11:00','NO'),(12,'11:00 - 12:00','11:00','12:00','NO'),(13,'12:00 - 13:00','12:00','13:00','NO'),(14,'13:00 - 14:00','13:00','14:00','NO'),(15,'14:00 - 15:00','14:00','15:00','NO'),(16,'15:00 - 16:00','15:00','16:00','NO'),(17,'16:00 - 17:00','16:00','17:00','NO'),(18,'17:00 - 18:00','17:00','18:00','NO'),(19,'18:00 - 19:00','18:00','19:00','NO'),(20,'19:00 - 20:00','19:00','20:00','NO'),(21,'20:00 - 21:00','20:00','21:00','NO'),(22,'21:00 - 22:00','21:00','22:00','NO'),(23,'22:00 - 23:00','22:00','23:00','NO'),(24,'23:00 - 00:00','23:00','00:00','NO');
+INSERT INTO `turnos` VALUES (1,'00:00 - 01:00','00:00','01:00','NO'),(2,'01:00 - 02:00','01:00','02:00','NO'),(3,'02:00 - 03:00','02:00','03:00','NO'),(4,'03:00 - 04:00','03:00','04:00','NO'),(5,'04:00 - 05:00','04:00','05:00','NO'),(6,'05:00 - 06:00','05:00','06:00','NO'),(7,'06:00 - 07:00','06:00','07:00','NO'),(8,'07:00 - 08:00','07:00','08:00','NO'),(9,'08:00 - 09:00','08:00','09:00','NO'),(10,'09:00 - 10:00','09:00','10:00','NO'),(11,'10:00 - 11:00','10:00','11:00','SI'),(12,'11:00 - 12:00','11:00','12:00','SI'),(13,'12:00 - 13:00','12:00','13:00','SI'),(14,'13:00 - 14:00','13:00','14:00','SI'),(15,'14:00 - 15:00','14:00','15:00','SI'),(16,'15:00 - 16:00','15:00','16:00','SI'),(17,'16:00 - 17:00','16:00','17:00','SI'),(18,'17:00 - 18:00','17:00','18:00','SI'),(19,'18:00 - 19:00','18:00','19:00','SI'),(20,'19:00 - 20:00','19:00','20:00','SI'),(21,'20:00 - 21:00','20:00','21:00','SI'),(22,'21:00 - 22:00','21:00','22:00','SI'),(23,'22:00 - 23:00','22:00','23:00','SI'),(24,'23:00 - 00:00','23:00','00:00','SI');
 /*!40000 ALTER TABLE `turnos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -220,7 +220,7 @@ CREATE TABLE `usuarios` (
   `pass` varchar(100) DEFAULT NULL,
   `perfil` int DEFAULT NULL,
   PRIMARY KEY (`ID_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -229,7 +229,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Martin','Altamirano','3512887744',31897456,'2000-05-26','1@gmail.com','maltamirano','1234',2),(2,'Daniel','Fuentes','423569852',40566822,'1990-10-24','df@hotmail.com','dfuentes','1234',2),(3,'Carlos','Ayala','558899',42563124,'2005-03-02','carlos@yahoo.com','cayala','1234',2),(4,'Federico','Cordoba','3512168877',29208191,'1981-12-10','fcordoba@gmail.com','fcordoba','123456',1),(5,'Federico','Sanchez','3512455663',33700564,'1991-05-17','fsanchez@gmail.com','fsanchez','123456',1),(6,'Elías Valentin','Valdez','3515454749',42440560,'1995-04-05','elias.ol333@gmail.com','evaldez','123456',1),(7,'Herman','Aguilar','3516123458',34349529,'1990-06-12','aguilar.hfd@gmail.com','haguilar','123456',1),(8,'Franco','Molina','3516123458',41152795,'1986-01-04','francomolina155@gmail.com','fmolina','123456',1),(9,'prueba','prueba','423569852',40566822,'1990-10-24','prueba@hotmail.com','test_socio','1234',2);
+INSERT INTO `usuarios` VALUES (1,'Martin','Altamirano','3512887744',31897456,'2000-05-26','1@gmail.com','maltamirano','1234',2),(2,'Daniel','Fuentes','423569852',40566822,'1990-10-24','df@hotmail.com','dfuentes','1234',2),(3,'Carlos','Ayala','558899',42563124,'2005-03-02','carlos@yahoo.com','cayala','1234',2),(4,'Federico','Cordoba','3512168877',29208191,'1981-12-10','fcordoba@gmail.com','fcordoba','123456',1),(5,'Federico','Sanchez','3512455663',33700564,'1991-05-17','fsanchez@gmail.com','fsanchez','123456',1),(6,'Elías Valentin','Valdez','3515454749',42440560,'1995-04-05','elias.ol333@gmail.com','evaldez','123456',1),(7,'Herman','Aguilar','3516123458',34349529,'1990-06-12','aguilar.hfd@gmail.com','haguilar','123456',1),(8,'Franco','Molina','3516123458',41152795,'1986-01-04','francomolina155@gmail.com','fmolina','123456',1),(9,'prueba','prueba','423569852',40566822,'1990-10-24','prueba@hotmail.com','test_socio','1234',2),(10,NULL,NULL,'1',22441166,NULL,'1',NULL,NULL,3),(11,NULL,NULL,'6',265544,NULL,'2',NULL,NULL,3);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -242,4 +242,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-06-12 17:05:32
+-- Dump completed on 2024-06-12 17:31:06
