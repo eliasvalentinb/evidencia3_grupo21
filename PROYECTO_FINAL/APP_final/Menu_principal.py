@@ -1,8 +1,6 @@
-import Editar_Precio_Horarios
-import Log_Usuarios_Reg_y_ADM  #contiene funciones de Login para usuarios registrados y ADM
-import Usuario_Nuevo           #contiene la funcion para crear un nuevo usuario
-import Login_registrados
-import Login_Nuevos
+import Login_registrados       #contiene funciones de Login para usuarios registrados y ADM
+import Login_Nuevos            #contiene la funcion para crear un nuevo usuario
+import Login_invitados         #contiene las funciones para los invitados
 print("====================================================================")
 print("                  BIENVENIDO A HOY SE JUEGA!")
 print("====================================================================")
@@ -23,4 +21,4 @@ else:
        Login_Nuevos.Usuario_Nvo()
     else: 
         if eleccion ==3:
-            print("entrar como invitado") 
+            Login_invitados.invitados() 
