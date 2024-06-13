@@ -13,10 +13,10 @@ def invitados():
   dic[fila[4]] =fila[0]  #se arma un diccionario documento:id_usuario
  print("                            USUARIO INVITADO                                 ") 
  print("=============================================================================")
- dni = int(input("Ingrese si documento"))
+ dni = int(input("Ingresá tu DNI: "))
  Documentos = dic.keys()  
  if dni in Documentos:
-  print("esta registrado")
+  print("Está registrado.")
   Usu_id=dic.get(dni)
   Usuario = Usu_id
   Sumarse_a_partido.buscar_partido(Usuario)

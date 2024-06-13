@@ -24,34 +24,31 @@ def buscar_partido(Usuario):
         resultados=cursor.fetchall()
         print("                     SUMARSE A UN PARTIDO                           ")
         print("====================================================================")
-        print ("Podemos ofrecerte las siguientes opciones")
+        print ("Podemos ofrecerte las siguientes opciones: ")
         print("--------------------------------------------------------------------")
         dic_partido={}
         for fila in resultados:
           dic_partido[fila[0]]=[fila[1],fila[2],fila[3],fila[4]]
-          print("Queres sumarte el dia",fila[1], "de",fila[2]," hs. Una cancha de "
+          print("El dia",fila[1], "de",fila[2]," hs. Una cancha de "
                  ,fila[3]," jugadores (quedan ",fila[4]," lugares). Ingresa el cod.: ",fila[0]) 
         #print(dic_partido)
         print( " ")
         print("--------------------------------------------------------------------")
-        elije = input("Te sirve alguna de las opciones? (si -no): ")
+        eleccion = input("Ingresá el código: ")
+        datos_part = dic_partido.get(int(eleccion))
         print( )
-        if elije == "si":
-         eleccion = input("ingresa el codigo: ")
-         datos_part = dic_partido.get(int(eleccion))
-         print( )
-         print("--------------------------------------------------------------------")
-         print("  Elejiste sumarte al partido de: ")
-         print("--------------------------------------------------------------------")
-         print("- El dia ",datos_part[0])
-         print("- En el horario de: ",datos_part[1])
-         print("- En una cancha de ",datos_part[2],"jugadores.")
+        print("--------------------------------------------------------------------")
+        print("  Elejiste sumarte al partido de: ")
+        print("--------------------------------------------------------------------")
+        print("- El dia ",datos_part[0])
+        print("- En el horario de: ",datos_part[1])
+        print("- En una cancha de ",datos_part[2],"jugadores.")
 
-         print("--------------------------------------------------------------------")
-         confirmacion = input("confirmamos tu solicitud? (si - no): ")
-         print("--------------------------------------------------------------------")
+        print("--------------------------------------------------------------------")
+        confirmacion = input("¿Confirmamos tu solicitud? (si - no): ").lower()
+        print("--------------------------------------------------------------------")
          
-         if confirmacion == "si":
+        if confirmacion == "si":
             #sql1=f"""Select id_usuario from usuarios where nombre_usuario={USU} """
             #cursor=conexion.cursor()
             #cursor.execute(sql1)
@@ -61,8 +58,8 @@ def buscar_partido(Usuario):
             valores = (int(eleccion) ,int(Usuario))
             cursor.execute(sql,valores)
             conexion.commit()
-            print("Tu solicitud fue enviada al organizador, te estaremos confirmando cuando el te acepte")
-         else: print("Gracias") 
-        else : print("Gracias")
+            print("Tu solicitud fue enviada al organizador, te estaremos notificando cuando él acepte.")
+        else: print("¡Gracias!") 
+ else : print("¡Gracias!")
 
  Conectar_desconectar.desconexion(conexion)

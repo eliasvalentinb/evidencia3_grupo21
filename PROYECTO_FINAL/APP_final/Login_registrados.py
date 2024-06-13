@@ -18,7 +18,7 @@ def log_usuarios():
             while True:
                 print("                               LOGIN                                ")
                 print("====================================================================")
-                USU=input("ingrese su usuario: ") #pide el usuario para validar 
+                USU=input("Ingresá tu usuario: ") #pide el usuario para validar 
                 pass_perfil = dic.get(USU)
                 #print(pass_perfil)
                 pass_reg = pass_perfil[0]
@@ -27,30 +27,30 @@ def log_usuarios():
                 #print(pass_reg)           #limpiar solo es para test
                 usuarios=dic.keys()       #listado de las claves del diccionario     
                 if USU not in usuarios:
-                    print("Usuario invalido")
+                    print("Usuario no válido.")
                     cu = cu + 1
                     if cu == 3:
                         break
                 else:
                     cp = 0
                     while True:
-                        PAS=input("ingrese su password: ")
+                        PAS=input("Ingresá tu contraseña: ")
                         #print("====================================================================")
                         print("********************************************************************")
                         if PAS != pass_reg:
-                            print("password incorrecto")
+                            print("Contraseña incorrecta. Intentá nuevamente.")
                             cp = cp +1
                             if cp == 3:
                                 break
                         else:
-                            print("Bienvenido, ",USU)
+                            print(f"¡Bienvenido, {USU}!")
                             if perfil == 1:
                                 print("********************************************************************")
                                 #print("====================================================================")
-                                print("             Para MODIFICAR los PRECIOS  - ingresa 1                ")
-                                print("             Para MODIFICAR los HORARIOS - ingresa 2                ")
+                                print("             Para MODIFICAR los PRECIOS  - Ingresá 1                ")
+                                print("             Para MODIFICAR los HORARIOS - Ingresá 2                ")
                                 print("--------------------------------------------------------------------")
-                                llamar=int(input("ingrese una opcion. "))
+                                llamar=int(input("Ingresá una opción: "))
                                 print("--------------------------------------------------------------------")
                                 print( )
                                 if llamar == 1:
@@ -59,10 +59,10 @@ def log_usuarios():
                             if perfil == 2:
                                 print("********************************************************************")
                                 #print("====================================================================")
-                                print("             Para ALQUILAR una CANCHA   - ingresa 1                 ")
-                                print("             Para SUMARTE a un PARTIDO  - ingresa 2                 ")
+                                print("             Para ALQUILAR una CANCHA   - Ingresá 1                 ")
+                                print("             Para SUMARTE a un PARTIDO  - Ingresá 2                 ")
                                 print("--------------------------------------------------------------------")
-                                llamar2=int(input("ingrese una opcion. "))
+                                llamar2=int(input("Ingresá una opción: "))
                                 print("--------------------------------------------------------------------")
                                 print( )
                                 #llamar2 = int(input("1 para alquiar cancha, 2 para sumarte a un partido "))

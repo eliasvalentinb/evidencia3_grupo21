@@ -10,16 +10,16 @@ def alquiler():
         # ---------Damos las opciones de canchas----------------------------------
         print("                     ALQUILER de CANCHAS                            ")
         print("====================================================================")
-        print("cancha para cuantos jugadores estas buscando?")
+        print("¿De qué capacidad quisieras alquilar la cancha?")
         print("====================================================================")
         cursor=conexion.cursor() 
         cursor.execute("select * from Canchas;") 
         tabla_canchas = cursor.fetchall()       
         for filas in tabla_canchas:
-         print("Id: ",filas[0]," - ",filas[1],"(",filas[2]," jugadores) - precio Alquiler: ",filas[3])
+         print("Id: ",filas[0]," - ",filas[1],"(",filas[2]," jugadores) - Precio de Alquiler: ",filas[3])
  print( )
  print("--------------------------------------------------------------------")
- Cancha = input("Que cancha te gustaria? (ingresa el Id): ")
+ Cancha = input("¿Qué cancha te gustaría? (Ingresá el Id): ")
  print("--------------------------------------------------------------------")
         #--------Evaluamos si esta la fecha habilitada para reservas--------------
  salir ="no"
@@ -27,7 +27,7 @@ def alquiler():
             fechaAct = datetime.datetime.now().date()
             print("                        DEFINIR FECHA                               ")
             print("====================================================================")
-            Fecha=input("Que fecha te interesa alquilar?(dd/mm/aaaa): ")
+            Fecha=input("¿En qué fecha te interesaría alquilar? (dd/mm/aaaa): ")
             formato_fecha = "%d/%m/%Y"  
             Fecha_ok = datetime.datetime.strptime(Fecha,formato_fecha) # convierte el str a fecha
             Fecha_final = Fecha_ok.date()  #formato de fecha
@@ -41,7 +41,7 @@ def alquiler():
             resultados=cursor.fetchall()
             for fila in resultados:
                 if fila[0] == 0 or Fecha_final < fechaAct :
-                    print("esa fecha no esta disponible") 
+                    print("Esa fecha no está disponible.") 
                 else: salir="si"
             if salir == "si":
              break
@@ -65,18 +65,18 @@ def alquiler():
  print( )
  print("                        DEFINIR HORARIOS                            ")
  print("====================================================================")
- print("los horarios libres para este dia son: ")
+ print("Los horarios libres para este día son: ")
  for fila in resultados: 
             Turno[fila[2]] = fila[3]  #guardo el id_turno y el turno para despues mostrar la eleccion   
-            print("para el turno de ",fila[3]," ingresa ",fila[2] )
+            print("Para el turno de ",fila[3]," ingresá ",fila[2] )
  print( )
  print("--------------------------------------------------------------------")
- Id_turno = int(input("Que horario vas a reservar? (ingresa el Id): "))
+ Id_turno = int(input("¿En qué horario vas a reservar? (Ingresá el Id): "))
  print("--------------------------------------------------------------------")
     # ------ Consulta el estado de los equipos-----------------------------------------
  equipo_completo = input("Tenes los esquipos completos? (si - no): ") 
  if equipo_completo == "no":
-           sumar_jugadores = input("Queres sumar jugadores? (si - no): ")
+           sumar_jugadores = input("Queres sumar jugadores? (si - no): ").lower()
            if sumar_jugadores=="si":
             Q_faltan = input("Cuantos jugadores te faltan?: ")
  else:
@@ -86,12 +86,12 @@ def alquiler():
     #----- damos un resumen de la reserva antes de confirmar ---------------------------
  print("                        VALIDAMOS RESERVA                           ")
  print("====================================================================")
- print("tu reserva seria:")
- print("para el dia ",Fecha)
- print("Una cancha para 7 Jugadores")
- print("en el turno ",Turno.get(Id_turno)," horas")
+ print("Los detalles de tu reserva:")
+ print("Fecha: ",Fecha)
+ print("Cancha de 7 jugadores.")
+ print("En el turno ",Turno.get(Id_turno)," horas.")
  print("--------------------------------------------------------------------")
- confirma= input("CONFIRMAMOS TU RESERVA? (SI - NO): ")
+ confirma= input("¿CONFIRMAMOS TU RESERVA? (SI - NO): ").lower()
  print("--------------------------------------------------------------------")
  print()
  if confirma == "si":
@@ -100,4 +100,4 @@ def alquiler():
       valores= (Fec,Id_turno,1,int(Cancha),equipo_completo,sumar_jugadores,int(Q_faltan))
       cursor.execute(sql,valores)   
       conexion.commit() 
- else: print("Gracias")
+ else: print("Gracias.")
