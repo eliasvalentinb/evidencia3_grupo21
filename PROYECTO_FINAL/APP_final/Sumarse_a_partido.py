@@ -18,6 +18,8 @@ def buscar_partido(Usuario):
                     from partido p 
                     INNER JOIN turnos t on (p.Id_turno = t.Id_turno)
                     INNER JOIN canchas c on (p.Id_cancha = c.id_cancha)
+                    where p.q_faltan > 0
+                    and p.fecha>={Fecha_ok}
                     ;"""
         cursor=conexion.cursor()
         cursor.execute(sql) 
