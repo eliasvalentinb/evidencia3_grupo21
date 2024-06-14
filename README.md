@@ -1,3 +1,7 @@
+**Link a video explicativo**:
+
+https://drive.google.com/file/d/1rW41Pg1vm8m-QIT_KwykMhcnvCG4uKKx/view?usp=drive_link
+
 ### SEJUEGA! ###
 
 En esta ocasión, un predio de canchas de fútbol nos pidió que hagamos una aplicación para que sus clientes interactúen directamente desde ella. Teniendo distintas posibilidades de alquilar y jugar en las canchas sin necesidad de que haya un contacto directo.
